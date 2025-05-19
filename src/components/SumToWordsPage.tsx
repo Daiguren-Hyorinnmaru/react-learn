@@ -73,13 +73,16 @@ export default function SumToWordsPage() {
                 </div>
             </div>
 
-            <button
-                className="btn btn-primary mb-3"
-                onClick={handleSubmit}
-                disabled={!amount}
-            >
-                Convert
-            </button>
+            <div className="d-flex justify-content-center mb-3">
+                <button
+                    className="btn btn-primary"
+                    onClick={handleSubmit}
+                    disabled={!amount}
+                >
+                    Convert
+                </button>
+            </div>
+
 
             {error && <div className="alert alert-danger">{error}</div>}
             {result && <div className="alert alert-success"><strong>Result:</strong> {result}</div>}
