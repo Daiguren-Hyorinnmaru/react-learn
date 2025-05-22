@@ -1,8 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Route, Routes, BrowserRouter, NavLink} from "react-router-dom";
-import Home from "./components/Home";
-import SumToWordsPage from "./components/SumToWordsPage";
+import Home from "./components/page/home/Home";
+import SumToWordsPage from "./components/page/sum_to_words/SumToWordsPage";
+import InvoiceNumber from "./components/page/invoice_number_builder/InvoiceNumber";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
                     <nav className="nav">
                         <NavLink className="nav-link text-light" to="/">🏠 Home</NavLink>
                         <NavLink className="nav-link text-light" to="/sum-to-words">🔤 Sum To Words</NavLink>
+                        <NavLink className="nav-link text-light" to="/invoice-number">🧾 Invoice number</NavLink>
                     </nav>
                 </header>
 
@@ -20,6 +22,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/sum-to-words" element={<SumToWordsPage />} />
+                        <Route path="/invoice-number" element={<InvoiceNumber />} />
                     </Routes>
                 </main>
             </div>
